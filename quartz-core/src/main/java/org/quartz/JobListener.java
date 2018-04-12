@@ -19,6 +19,7 @@
 package org.quartz;
 
 /**
+ * 任务执行情况的监听器
  * The interface to be implemented by classes that want to be informed when a
  * <code>{@link org.quartz.JobDetail}</code> executes. In general,
  * applications that use a <code>Scheduler</code> will not have use for this
@@ -61,6 +62,7 @@ public interface JobListener {
      * This method will not be invoked if the execution of the Job was vetoed
      * by a <code>{@link TriggerListener}</code>.
      * </p>
+     * <p>任务即将执行的回调</p>
      * 
      * @see #jobExecutionVetoed(JobExecutionContext)
      */
@@ -85,6 +87,7 @@ public interface JobListener {
      * has been executed, and be for the associated <code>Trigger</code>'s
      * <code>triggered(xx)</code> method has been called.
      * </p>
+     * <p>当任务执行完毕的时候的回调，开发者可以使用该方法处理任务执行完成之后的逻辑</p>
      */
     void jobWasExecuted(JobExecutionContext context,
             JobExecutionException jobException);

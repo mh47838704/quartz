@@ -365,6 +365,9 @@ public class SimpleTriggerImpl extends AbstractTrigger<SimpleTrigger> implements
      * Set the the number of time the <code>SimpleTrigger</code> should
      * repeat, after which it will be automatically deleted.
      * </p>
+     * <p>
+     *     设置调度器重复触发的次数，在指定的重复次数之后调度器将会被自动删除
+     * </p>
      * 
      * @see #REPEAT_INDEFINITELY
      * @exception IllegalArgumentException

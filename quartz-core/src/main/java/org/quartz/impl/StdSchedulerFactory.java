@@ -853,7 +853,7 @@ public class StdSchedulerFactory implements SchedulerFactory {
 
         // Get JobStore Properties
         // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+        // 设置jobStore的配置，默认使用RAMJobStore存储配置
         String jsClass = cfg.getStringProperty(PROP_JOB_STORE_CLASS,
                 RAMJobStore.class.getName());
 

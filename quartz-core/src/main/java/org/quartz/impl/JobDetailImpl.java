@@ -82,12 +82,15 @@ public class JobDetailImpl implements Cloneable, java.io.Serializable, JobDetail
 
     private Class<? extends Job> jobClass;
 
+    /** 可以作为job的参数容器 */
     private JobDataMap jobDataMap;
 
+    /** 当没有任何的trigger指向该任务的时候，该任务是否继续保留 */
     private boolean durability = false;
 
     private boolean shouldRecover = false;
 
+    /** jobDetail在Scheduler中的唯一标识符，通常=name和group的组合 */
     private transient JobKey key = null;
 
     /*

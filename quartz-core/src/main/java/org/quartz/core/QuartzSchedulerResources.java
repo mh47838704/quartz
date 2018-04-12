@@ -32,6 +32,9 @@ import org.quartz.spi.ThreadPool;
  * Contains all of the resources (<code>JobStore</code>,<code>ThreadPool</code>,
  * etc.) necessary to create a <code>{@link QuartzScheduler}</code> instance.
  * </p>
+ * <p>
+ *     该类包含了调度所需要的所有的资源
+ * </p>
  * 
  * @see QuartzScheduler
  * 

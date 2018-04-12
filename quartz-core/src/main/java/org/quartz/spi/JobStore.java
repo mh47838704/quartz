@@ -42,6 +42,9 @@ import org.quartz.impl.matchers.GroupMatcher;
  * and <code>{@link org.quartz.Trigger}</code> storage mechanism for the
  * <code>{@link org.quartz.core.QuartzScheduler}</code>'s use.
  * </p>
+ * <p>
+ *     该接口提供了存储任务和触发器的一种机制
+ * </p>
  *
  * <p>
  * Storage of <code>Job</code> s and <code>Trigger</code> s should be keyed

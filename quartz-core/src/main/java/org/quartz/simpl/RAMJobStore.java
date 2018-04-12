@@ -64,12 +64,19 @@ import static org.quartz.impl.matchers.EverythingMatcher.allTriggers;
  * This class implements a <code>{@link org.quartz.spi.JobStore}</code> that
  * utilizes RAM as its storage device.
  * </p>
+ * <p>
+ *     该类继承自JobStore，使用内存作为其存储设备
+ * </p>
  * 
  * <p>
  * As you should know, the ramification of this is that access is extrememly
  * fast, but the data is completely volatile - therefore this <code>JobStore</code>
  * should not be used if true persistence between program shutdowns is
  * required.
+ * </p>
+ * <p>
+ *     由于该类使用的存储设备是内存，所以存取速度非常的快，但是内存具有断电挥发性
+ *     所有不适合用于定时任务持久化的业务场景中
  * </p>
  * 
  * @author James House
@@ -1440,6 +1447,9 @@ public class RAMJobStore implements JobStore {
      * <p>
      * Get a handle to the next trigger to be fired, and mark it as 'reserved'
      * by the calling scheduler.
+     * </p>
+     * <p>
+     *     获取当前调度器中所有需要被触发的触发器
      * </p>
      *
      * @see #releaseAcquiredTrigger(OperableTrigger)

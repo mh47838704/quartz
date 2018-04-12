@@ -20,8 +20,10 @@ package org.quartz;
 import org.quartz.utils.Key;
 
 /**
+ * JobDetail的唯一标识符
  * Uniquely identifies a {@link JobDetail}.
- * 
+ *
+ * 通常是JobDetail的name和group的组合
  * <p>Keys are composed of both a name and group, and the name must be unique
  * within the group.  If only a name is specified then the default group
  * name will be used.</p> 

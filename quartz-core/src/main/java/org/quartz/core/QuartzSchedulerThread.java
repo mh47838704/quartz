@@ -39,6 +39,9 @@ import org.slf4j.LoggerFactory;
  * The thread responsible for performing the work of firing <code>{@link Trigger}</code>
  * s that are registered with the <code>{@link QuartzScheduler}</code>.
  * </p>
+ * <p>
+ *     该类是一个线程类，主要负责触发调度注册到QuartzScheduler上的任务
+ * </p>
  *
  * @see QuartzScheduler
  * @see org.quartz.Job

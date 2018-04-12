@@ -46,6 +46,10 @@ import org.quartz.spi.JobFactory;
  * proxies all method calls to the equivalent call on a given <code>QuartzScheduler</code>
  * instance.
  * </p>
+ * <p>
+ *     继承Scheduler接口，是QuartzScheduler调度器的代理实现，QuartzScheduler才是具体调度器的
+ *     内部实现。
+ * </p>
  * 
  * @see org.quartz.Scheduler
  * @see org.quartz.core.QuartzScheduler
